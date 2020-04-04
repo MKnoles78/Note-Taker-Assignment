@@ -2,7 +2,7 @@
   "name": "Note-Taker-Assignment",
   "version": "1.0.0",
   "description": "",
-  "main": "apiRoutes.js",
+  "main": "htmlRoutes.js",
   "dependencies": {
     "express": "^4.17.1"
   },
