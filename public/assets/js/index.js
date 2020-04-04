@@ -1,6 +1,6 @@
 var express = require("express");
 var path = require("path");
-var fs = require("fs");
+var fs = require("fs")
 
 var $noteTitle = $(".note-title");
 var $noteText = $(".note-textarea");
@@ -8,21 +8,9 @@ var $saveNoteBtn = $(".save-note");
 var $newNoteBtn = $(".new-note");
 var $noteList = $(".list-container .list-group");
 
-var app = express();
-var PORT = process.env.PORT || 8080;
 
 // activeNote is used to keep track of the note in the textarea
 var activeNote = {};
-
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-
-// GET `/notes` - Should return the `notes.html` file.
-app.get("/notes", function(req, res){
-  res.sendFile(path.join(__dirname, "..public/notes.html")); 
-});
 
 
 // A function for getting all notes from the db
@@ -159,3 +147,8 @@ $noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
+
+server.listen(PORT, function() {
+  // Callback triggered when server is successfully listening. Hurray!
+  console.log("Server listening on: http://localhost:" + PORT);
+});
