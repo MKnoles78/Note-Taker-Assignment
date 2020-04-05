@@ -23,8 +23,20 @@ app.get('/notes', (req, res) => {
 app.get("/api/notes", (req, res) => {
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) throw err;
+        return res.end(data)
     })
 })
+
+app.post("/api/notes", (req, res) => {
+    // * POST `/api/notes` - Should receive a new note to save on the request body,
+    var newNote = req.body
+    var saveNote; 
+
+    fs.readFile("./db/db.json", "utf-8", (err, data) => {
+        if (err) throw err;
+        return res.end(data)
+    })
+});
 
 
 
