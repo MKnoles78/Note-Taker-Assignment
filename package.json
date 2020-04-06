@@ -1,0 +1,27 @@
+{
+  "name": "Note-Taker-Assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "htmlRoutes.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "test": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MKnoles78/Note-Taker-Assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MKnoles78/Note-Taker-Assignment/issues"
+  },
+  "homepage": "https://github.com/MKnoles78/Note-Taker-Assignment#readme"
+}
