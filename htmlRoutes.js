@@ -21,7 +21,7 @@ app.get('/notes', (req, res) => {
 
 // * GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 app.get("/api/notes", (req, res) => {
-    fs.readFile("./db/db.json", "utf-8", (err, data) => {
+    req.fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) throw err;
         return res.end(data)
     })
@@ -30,12 +30,12 @@ app.get("/api/notes", (req, res) => {
 app.post("/api/notes", (req, res) => {
     // * POST `/api/notes` - Should receive a new note to save on the request body,
     var newNote = req.body
-    var saveNote; 
+    // var saveNote []; 
 
     fs.readFile("./db/db.json", "utf-8", (err, data) => {
         if (err) throw err;
         return res.end(data)
-    })
+    });
 });
 
 
